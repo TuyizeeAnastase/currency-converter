@@ -1,9 +1,15 @@
 import joi from "joi";
 export const currencyValidation = async (req, res, next) => {
   const currencySchema = joi.object({
-    value: joi.number().required().messages({}),
-    from: joi.string().required().messages({}),
-    to: joi.string().required().messages({}),
+    value: joi.number().required().messages({
+      "any.required": "Amount is required",
+    }),
+    from: joi.string().required().messages({
+      "any.required": "Current currency is required",
+    }),
+    to: joi.string().required().messages({
+      "any.required": "covertion currency is required",
+    }),
   });
   const value = await currencySchema.validate(req.body);
   if (value.error) {
