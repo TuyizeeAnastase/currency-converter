@@ -39,4 +39,24 @@ export const data = [
     currency: "WA-SFP",
     value: 613.87,
   },
+  {
+    currency: "USD",
+    value: 1,
+  },
+  {
+    currency: "POUND",
+    value: 0.83,
+  },
+  {
+    currency: "KDINALL",
+    value: 0.31,
+  },
+  {
+    currency: "KWANZA",
+    value: 503.99,
+  },
+  {
+    currency: "MANAT",
+    value: 1.70,
+  },
 ];

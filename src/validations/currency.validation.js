@@ -8,7 +8,7 @@ export const currencyValidation = async (req, res, next) => {
       "any.required": "Current currency is required",
     }),
     to: joi.string().required().messages({
-      "any.required": "covertion currency is required",
+      "any.required": "convertion currency is required",
     }),
   });
   const value = await currencySchema.validate(req.body);
